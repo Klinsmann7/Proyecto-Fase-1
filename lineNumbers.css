@@ -69,7 +69,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: white; /* Ajusta el color del texto de los enlaces */
+    color: rgb(111, 108, 108); /* Ajusta el color del texto de los enlaces */
 }
 
 .hasklyns-subtitle {
