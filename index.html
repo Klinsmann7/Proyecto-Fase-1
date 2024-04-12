@@ -26,9 +26,9 @@
 </head>
 <body onload="updateLineNumbers()">
     <nav class="container-fluid">
-        <ul>
-            <li><strong class="hasklyns-title">HasKlyns</strong><span class="hasklyns-subtitle">Aprende a programar con videojuegos</span></li>
-        </ul>
+        <a href="https://hasklyns-79b46dfcc3a4.herokuapp.com/">
+            <img src="images/Hasklyns.jpg.webp" alt="HasKlyns Logo" style="height: 200px;"> <!-- Ajusta la altura según sea necesario -->
+        </a>
         <ul>
             <li><a href="https://github.com/Klinsmann7/Proyecto-Fase-1.git" target="_blank">Documentación</a></li>
         </ul>
@@ -38,9 +38,9 @@
             <section>
                 <hgroup>
                     <h2>Bienvenido al Compilador Hasklyns</h2>
-                    <h3>Tu herramienta para desarrollo en Hasklyns</h3>
+                    <h3>Tu herramienta para desarrollo para aprender a programar con video juegos.</h3>
                 </hgroup>
-                <p>Sube tu archivo .hk con código o escribe directamente en el editor abajo.</p>
+                <p>Sube tu archivo .hk o escribe directamente en el editor abajo.</p>
                 <input type="file" id="fileInput" accept=".hk" aria-label="Cargar archivo HK" onchange="handleFileUpload(event)">
                 <div id="container">
                     <div id="lineNumbers"></div>
