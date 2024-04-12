@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="lineNumbers.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Estilo de la fuente general */
+        }
+
+        .background-footer {
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/juego.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white; /* Color del texto para mejorar la legibilidad */
+            text-align: center; /* Centrar el texto */
+            padding: 20px 0; /* Padding para dar más espacio */
+            margin-top: 20px; /* Espacio antes del footer */
+        }
+    </style>
+    <script src="script.js" defer></script>
+    <title>Hasklyns Compiler</title>
+</head>
+<body onload="updateLineNumbers()">
+    <nav class="container-fluid">
+        <ul>
+            <li><strong class="hasklyns-title">HasKlyns</strong><span class="hasklyns-subtitle">Aprende a programar con videojuegos</span></li>
+        </ul>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="https://github.com/Klinsmann7/HasKlyns" target="_blank">Documentación</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <div class="grid">
+            <section>
+                <hgroup>
+                    <h2>Bienvenido al Compilador Hasklyns</h2>
+                    <h3>Tu herramienta para desarrollo en Hasklyns</h3>
+                </hgroup>
+                <p>Sube tu archivo con código o escribe directamente en el editor abajo.</p>
+                <input type="file" id="fileInput" accept=".hk" aria-label="Cargar archivo HK" onchange="handleFileUpload(event)">
+                <div id="container">
+                    <div id="lineNumbers"></div>
+                    <textarea id="codeEditor" placeholder="Escribe tu código aquí..." rows="10" cols="50" oninput="updateLineNumbers()"></textarea>
+                </div>
+                <button onclick="alert('Compilación no implementada aún');">Compilar</button>                
+                <h3>Análisis de Código</h3>
+                <button onclick="alert('Análisis léxico no implementado aún');">Analizar Léxico</button>
+                <button onclick="alert('Análisis sintáctico no implementado aún');">Analizar Sintáctico</button>
+                <!-- Imagen destacada -->                           
+            </section>
+        </div>
+    </main>
+    <footer class="background-footer">
+        <p>Derechos de autor © 2024 Hasklyns. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+

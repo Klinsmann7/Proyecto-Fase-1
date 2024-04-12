@@ -1,0 +1,52 @@
+#container {
+    display: flex;
+    position: relative;
+}
+#lineNumbers {
+    background-color: #f3f3f3;
+    padding: 10px;
+    text-align: right;
+    border-right: 1px solid #ddd;
+    user-select: none;
+    overflow: hidden;
+}
+#codeEditor {
+    flex: 1;
+    margin-left: 10px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+/* Nuevos estilos para Hasklyns */
+.hasklyns-title {
+    font-family: 'Arial', sans-serif;
+    color: #004225; /* Un verde oscuro */
+    font-size: 32px;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.hasklyns-subtitle {
+    font-family: 'Arial', sans-serif;
+    color: #666; /* Color gris para el subtítulo */
+    font-size: 18px;
+    margin-top: -10px;
+    display: block; /* Asegura que el subtítulo se muestre en una nueva línea */
+}
+
+.background-footer {
+    background-image: url('images/juego.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 200px; /* Ajusta esto según la altura deseada */
+}
+
+.background-footer {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/juego.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 200px; /* Ajusta esto según la altura deseada */
+}
