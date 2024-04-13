@@ -1,3 +1,55 @@
-Hola
-este es un codigo de prueba
-Aprende a programar con videojuegos
+// Clase Arsenal para gestionar un inventario de artefactos
+clase Arsenal {
+    // Variables públicas para almacenar los artefactos y el valor total del inventario
+    abierto diccionario artefactos;
+    abierto entero valorTotal;
+
+    // Constructor que inicializa el inventario y el valor total a cero
+    constructor() {
+        artefactos = {};
+        valorTotal = 0;
+    }
+
+    // Método para agregar artefactos al inventario
+    funcion agregarArtefacto(artefacto, cantidad, precio) {
+        // Si el artefacto ya existe, aumenta su cantidad
+        si (artefacto en artefactos) {
+            artefactos[artefacto]['cantidad'] += cantidad;
+        } sino {
+            // Si es un nuevo artefacto, crea una entrada en el diccionario
+            artefactos[artefacto] = {'cantidad': cantidad, 'precio': precio};
+        }
+        // Aumenta el valor total del inventario
+        valorTotal += cantidad * precio;
+    }
+
+    // Método para eliminar artefactos del inventario
+    funcion eliminarArtefacto(artefacto, cantidad) {
+        // Verifica que exista el artefacto y que la cantidad a eliminar sea adecuada
+        si (artefacto en artefactos && artefactos[artefacto]['cantidad'] >= cantidad) {
+            artefactos[artefacto]['cantidad'] -= cantidad;
+            valorTotal -= cantidad * artefactos[artefacto]['precio'];
+            // Si no quedan más artefactos, elimina el artefacto del diccionario
+            si (artefactos[artefacto]['cantidad'] == 0) {
+                eliminar artefactos[artefacto];
+            }
+        }
+    }
+
+    // Método para mostrar la lista de artefactos y el valor total del inventario
+    funcion mostrarArsenal() {
+        // Itera sobre cada artefacto en el diccionario y muestra sus detalles
+        mario (cada artefacto, detalles en artefactos) {
+            kamehameha(artefacto + ": " + detalles['cantidad'] + " unidades, $" + detalles['precio'] + " cada uno");
+        }
+        kamehameha("Valor Total del Arsenal: $" + valorTotal);
+    }
+}
+
+// Uso de la clase Arsenal para agregar, eliminar y mostrar artefactos
+arsenal = nuevo Arsenal();
+arsenal.agregarArtefacto("Espada", 2, 300);
+arsenal.agregarArtefacto("Escudo", 1, 150);
+arsenal.eliminarArtefacto("Espada", 1);
+arsenal.mostrarArsenal();
+
