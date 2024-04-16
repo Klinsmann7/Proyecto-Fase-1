@@ -2,7 +2,7 @@
 clase Arsenal {
     // Variables públicas para almacenar los artefactos y el valor total del inventario
     abierto diccionario artefactos;
-    abierto entero valorTotal;
+    abierto entero valorTotal;  
 
     // Constructor que inicializa el inventario y el valor total a cero
     constructor() {
@@ -11,7 +11,7 @@ clase Arsenal {
     }
 
     // Método para agregar artefactos al inventario
-    funcion agregarArtefacto(artefacto, cantidad, precio) {
+    funcion agregarArtefacto(artefacto, cantidad,  precio) {
         // Si el artefacto ya existe, aumenta su cantidad
         si (artefacto en artefactos) {
             artefactos[artefacto]['cantidad'] += cantidad;
